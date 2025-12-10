@@ -29,14 +29,14 @@
                 lower_layer {
                         display-name = "Lower Layer";
 // -----------------------------------------------------------------------------------------
-// |  TAB |     |  UP |     | -   | +   |   | (   |  7  |  8  |  9  | )   | ESC  |
-// | CTRL| LFT | DWN | RGT | /   | *   |   | {   |  4  |  5  |  6  | }   |      |
-// | SHFT|     |     |     | "|" | &   |   | [   |  1  |  2  |  3  | ]   | BSPC |
+// |  TAB |  #  |   &  |  *  | +   |  = |   | (   |  7  |  8  |  9  | )   | ESC  |
+// | CTRL|  @  |  "|" | /   | -   |  ! |   |  [  |  4  |  5  |  6  |  ]  |   `  |
+// | SHFT|  $  |   \  |  %  | _ |   ~ |   |  {  |  1  |  2  |  3  | }   | BSPC |
 //                    | GUI |     | SPC |   | =   |     |  0  |
                         bindings = <
-   &kp TAB   &trans    &kp UP    &trans    &kp MINUS &kp PLUS    &kp LPAR &kp N7 &kp N8 &kp N9 &kp RPAR &kp ESC
-   &kp LCTRL &kp LEFT  &kp DOWN  &kp RIGHT &kp FSLH  &kp ASTRK   &kp LBRC &kp N4 &kp N5 &kp N6 &kp RBRC &trans
-   &kp LSHFT &trans    &trans    &trans    &kp PIPE  &kp AMPS    &kp LBKT &kp N1 &kp N2 &kp N3 &kp RBKT &kp BSPC
+   &kp TAB   &kp HASH  &kp AMPS  &kp ASTRK &kp PLUS  &kp EQUAL   &kp LPAR &kp N7 &kp N8 &kp N9 &kp RPAR &kp ESC
+   &kp LCTRL &kp AT    &kp PIPE  &kp FSLH  &kp MINUS &kp EXCL    &kp LBKT &kp N4 &kp N5 &kp N6 &kp RBKT &kp GRAVE
+   &kp LSHFT &kp DLLR  &kp BSLH  &kp PRCNT &kp UNDER &kp TILDE   &kp LBRC &kp N1 &kp N2 &kp N3 &kp RBRC &kp BSPC
                     &kp LGUI &trans &kp SPACE   &kp EQUAL &trans &kp N0
                         >;
                 };
@@ -44,13 +44,13 @@
                 raise_layer {
                         display-name = "Raise Layer";
 // -----------------------------------------------------------------------------------------
-// |  TAB |  !  |  @  |  #  |  $  |  %  |   |     |     |     |     |     |BTCLR |
-// | CTRL |  ^  |  \  |  `  |  ~  |  _  |   |     | BT3 | BT4 |     |     |      |
+// |  TAB |  !  |  @  | UP  |  #  |  $  |   |  ^  |  \  |  `  |  ~  |  _  |BTCLR |
+// | CTRL |     | LFT | DWN | RGT |     |   |     | BT3 | BT4 |     |     |      |
 // | SHFT |     |     |     |     |     |   |     | BT0 | BT1 | BT2 |     | BSPC |
 //                    | GUI |     | SPC |   | ENT |     |     |
                         bindings = <
-   &kp TAB   &kp EXCL  &kp AT    &kp HASH  &kp DLLR  &kp PRCNT   &trans     &trans     &trans     &trans     &trans     &bt BT_CLR
-   &kp LCTRL &kp CARET &kp BSLH  &kp GRAVE &kp TILDE &kp UNDER   &trans     &bt BT_SEL 3 &bt BT_SEL 4 &trans     &trans     &trans
+   &kp TAB   &kp EXCL  &kp AT    &kp UP    &kp HASH  &kp DLLR    &kp CARET  &kp BSLH   &kp GRAVE  &kp TILDE  &kp UNDER  &bt BT_CLR
+   &kp LCTRL &trans    &kp LEFT  &kp DOWN  &kp RIGHT &trans      &trans     &bt BT_SEL 3 &bt BT_SEL 4 &trans     &trans     &trans
    &kp LSHFT &trans    &trans    &trans    &trans    &trans      &trans     &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &trans     &kp BSPC
                     &kp LGUI &trans &kp SPACE   &kp RET &trans &trans
                         >;
